@@ -1,0 +1,11 @@
+.cards-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-wrapper .card:not(:first-child) {
+  margin-top: 40px;
+}
