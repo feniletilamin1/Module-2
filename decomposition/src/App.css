@@ -1,0 +1,152 @@
+.main {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__list {
+    list-style: none;
+}
+
+.news__title:not(:last-child) {
+    margin-right: 20px;
+}
+
+.news__list-item {
+    display: flex;
+    align-items: center;
+}
+
+.news__list-item::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-right: 10px;
+}
+
+.currencys__list {
+    list-style: none;
+    display: flex;
+}
+
+.currencys__list-item {
+    display: flex;
+}
+
+.currencys__list-item:not(:last-child) {
+    display: flex;
+    margin-right: 20px;
+}
+
+.currencys__list-item-currency, .currencys__list-item-value {
+    margin-right: 10px;
+}
+
+.add__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.search-bar-links {
+    list-style: none;
+    display: flex;
+}
+
+.search-bar-links__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.search-bar__banner {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+.info__weather {
+    display: flex;
+    align-items: center;
+}
+
+.info__weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.info__weather-degrees {
+    margin-right: 10px;
+}
+
+.info__visit-list {
+    list-style: none;
+}
+
+.info__visit-list-item a{
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+}
+
+.info-section__blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-section__blocks-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.info__title-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.info__tv-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.info__tv-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.info__tv-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.info__tv-list-item-link {
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+    margin-left: 10px;
+}
+
+.info__tv-list-item-name {
+    margin-left: 5px;
+}
+
+.info__tv-list-item-icon {
+    width: 30px;
+    height: 30px;
+}
