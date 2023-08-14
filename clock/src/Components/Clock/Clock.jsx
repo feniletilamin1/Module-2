@@ -14,7 +14,6 @@ export default function Clock(props) {
 
     const [clock, setClock] = useState(getTime(timeZone));
 
-
     useEffect(() => {
         const intevalId = setInterval(() => {
             setClock(getTime(timeZone));
@@ -23,8 +22,7 @@ export default function Clock(props) {
         return () => {
             clearInterval(intevalId);
         }
-    }, [timeZone]);
-
+    }, []);
 
     return (
         <div className="clock">
