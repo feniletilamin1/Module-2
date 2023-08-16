@@ -8,26 +8,29 @@ function App() {
   const requestUrl = "http://localhost:7070/notes";
 
   function getCards(requestUrl) {
-    fetch(requestUrl)
-    .then(res => res.json())
-    .then((result) => {
-        setCards({
-          items: result,
-          loading: false,
-          eror: false
-        });
-      },
-      (eror) => {
-        setCards({
-          items: null,
-          loading: false,
-          eror: eror
-        });
-      }
-    );
+    setTimeout(function () {
+      fetch(requestUrl)
+      .then(res => res.json())
+      .then((result) => {
+          setCards({
+            items: result,
+            loading: false,
+            eror: false
+          });
+        },
+        (eror) => {
+          setCards({
+            items: null,
+            loading: false,
+            eror: eror
+          });
+        }
+      );
+    }, 500);
   }
 
   function addNote(note) {
+    refrechState();
     try {
       fetch('http://localhost:7070/notes', {
         method: 'POST',
@@ -48,6 +51,7 @@ function App() {
   }
 
   function deleteNote(id) {
+    refrechState();
     try {
       fetch(`http://localhost:7070/notes/${id}`, { method: 'DELETE' });
       getCards(requestUrl);
@@ -63,14 +67,18 @@ function App() {
   });
 
   function refreshNotes() {
+    refrechState();
+
+    getCards(requestUrl);
+  }
+
+  function refrechState() {
     setCards({
       items: [],
       loading: true,
       eror: false,
     });
-    getCards(requestUrl);
   }
-
   
   useEffect(() => {
     getCards(requestUrl);
