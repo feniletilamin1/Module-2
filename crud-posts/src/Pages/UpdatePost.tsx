@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { PostType } from "../types/PostType";
 import Post from "../components/Posts/Post";
 import NotFound from "../components/NotFound";
-import React from "react";
 
 type UpdatePostProps = {
     posts: PostType[]
@@ -44,7 +43,7 @@ export default function UpdatePost (props: UpdatePostProps) {
        <>
         <GoHome />
         <form action="/#" className="post-form">
-            <textarea ref={textAreaElement} name="content" className="post-form__textarea"></textarea>
+            <textarea ref={textAreaElement} name="content" className="post-form__textarea" value={post.content}></textarea>
             <button onClick={(e) => {e.preventDefault(); updatePost(Number(id), textAreaElement.current?.value);}} type="submit" className="post-form__submit">Изменить пост</button>
         </form>
         <Post post={post}/>
