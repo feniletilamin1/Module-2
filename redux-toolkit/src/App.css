@@ -1,0 +1,55 @@
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.movie-card img {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.movie-details {
+  flex-grow: 1;
+}
+
+.movie-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.movie-year,
+.movie-genre,
+.movie-runtime,
+.movie-director,
+.movie-actors,
+.movie-rating {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.searcher-wrapper {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.favouritesLink {
+  padding: 5px 20px;
+  color: white;
+  font-size: 14px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.searcher__input {
+  padding: 5px 20px;
+  border-radius: 5px;
+  
+}
